@@ -8,6 +8,11 @@ public class MyRunnable implements Runnable {//step 1 implement
 		String name = thread.getName();
 		for (int i = 1; i<=5; i++) {
 			System.out.println(name+" is executing the Task: " + i);
+			try {
+				Thread.sleep(5000);
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
 		}
 	}
 }
